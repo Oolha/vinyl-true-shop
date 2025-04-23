@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+# Запускаємо CI для push та pull request на гілку main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Запуск на Ubuntu
+
+    steps:
+      # 1. Клонуємо код з репозиторію
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 2. Налаштовуємо правильну версію Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "20.11.1" # Вказуємо версію Node.js, яку хочемо використовувати
+
+      # 3. Встановлюємо залежності з package.json
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Публікуємо на Vercel
+      - name: Deploy to Vercel
+        env:
+          VERCEL_API_TOKEN: ${{ secrets.VERCEL_API_TOKEN }} # Токен Vercel з секретів
+        run: |
+          curl -fsSL https://vercel.com/download -o vercel
+          chmod +x vercel
+          ./vercel --token $VERCEL_API_TOKEN --prod --confirm

@@ -1,0 +1,50 @@
+:root {
+  --font-onest: "Onest", sans-serif;
+  --font-unbounded: "Unbounded", sans-serif;
+  --font-public-sans: "Public Sans", sans-serif;
+
+  /* Кольори */
+  --color-primary: #4731ff /*button*/;
+  --color-text: #171614;
+  --color-bg: #f1f1f1;
+  --hero-bg: #1a1a1a;
+  --sidebar-bg: #212121;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-onest);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-onest);
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+p {
+  font-family: var(--font-onest);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

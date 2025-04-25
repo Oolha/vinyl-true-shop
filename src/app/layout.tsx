@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { onest, unbounded, publicSans } from "./fonts";
-import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
+import Header from "@/components/layout/Header/Header";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",

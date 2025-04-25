@@ -1,13 +1,13 @@
 import Image from "next/image";
+import css from "./about.module.css";
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center px-6 py-10">
-      <h1 className="text-4xl font-bold mb-8">Про нас</h1>
+    <div className={css.container}>
+      <h1 className={css.heading}>Про нас</h1>
 
-      <div className="max-w-5xl flex flex-col md:flex-row items-center gap-10">
-        {/* Текстова частина */}
-        <div className="flex-1 space-y-6 text-lg text-gray-700">
+      <div className={css.contentWrapper}>
+        <div className={css.textSection}>
           <p>
             Роки колекціонування та ділінгу дозволили зібрати таку кількість платівок, 
             якої для однієї людини буде забагато, саме тому вирішили, що час не тільки 
@@ -25,25 +25,20 @@ const About = () => {
           </p>
         </div>
 
-        {/* Зображення */}
-        <div className="flex-1 flex flex-col items-center">
-          <div className="relative w-72 h-72">
+        <div className={css.imageSection}>
+          <div className={css.imageWrapper}>
             <Image
               src="/public/icons/image/owner photo 1x.jpg" // до фото
               alt="Олександр Тумко"
               layout="fill"
               objectFit="cover"
-              className="rounded-lg"
             />
           </div>
-          <p className="mt-4 text-center text-sm text-gray-500">Авторський проєкт: Олександр Тумко</p>
+          <p className={css.caption}>Авторський проєкт: Олександр Тумко</p>
         </div>
       </div>
 
-      {/* Хештег */}
-      <div className="mt-10 text-2xl text-gray-800 font-semibold">
-        #VinylTrue
-      </div>
+      <div className={css.hashtag}>#VinylTrue</div>
     </div>
   );
 };

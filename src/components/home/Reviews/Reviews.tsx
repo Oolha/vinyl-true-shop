@@ -53,7 +53,8 @@ const Reviews = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         breakpoints={{
-          640: { slidesPerView: 4 },
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 4 },
           1024: { slidesPerView: 5 },
         }}
       >

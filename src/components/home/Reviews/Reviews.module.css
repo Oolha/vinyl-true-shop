@@ -77,7 +77,25 @@
     font-weight: 600;
     font-size: 0.875rem;
   }
-
+  
+  .swiper-pagination {
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #6b7280; /* сірий колір */
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #111827; /* темно-сірий */
+  }
+  
   @media (prefers-color-scheme: dark) {
     .card {
       background-color: #1f2937; /* gray-800 */

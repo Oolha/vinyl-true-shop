@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { onest, unbounded, publicSans } from "./fonts";
-import Container from "@/components/ui/Container/Container";
-import Header from "@/components/layout/Header/Header";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -21,11 +19,7 @@ export default function RootLayout({
       className={`${onest.variable} ${unbounded.variable} ${publicSans.variable}`}
     >
       <body>
-        <header>
-          <Container>
-            <Header />
-          </Container>
-        </header>
+        <header></header>
         <main>{children}</main>
         <footer></footer>
       </body>

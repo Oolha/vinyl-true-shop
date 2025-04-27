@@ -29,8 +29,8 @@ export default function RootLayout({
           </Container>
         </header>
         <main>{children}
-          <About />
           <Reviews />
+          <About />
         </main>
         <footer></footer>
       </body>

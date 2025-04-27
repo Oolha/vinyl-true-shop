@@ -3,8 +3,9 @@ import "./globals.css";
 import { onest, unbounded, publicSans } from "./fonts";
 import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
-import About from '@/components/home/About/About';
-import Reviews from '@/components/home/Reviews/Reviews';
+import About from "@/components/home/About/About";
+import Reviews from "@/components/home/Reviews/Reviews";
+import Hero from "@/components/home/Hero/Hero";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -28,9 +29,11 @@ export default function RootLayout({
             <Header />
           </Container>
         </header>
-        <main>{children}
-          <About />
-          <Reviews />
+        <main>
+          {children}
+          {/* <About />
+          <Reviews /> */}
+          <Hero />
         </main>
         <footer></footer>
       </body>

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
-import css from "./reviews.module.css";
+import css from "./Reviews.module.css";
 
 const reviews = [
   {

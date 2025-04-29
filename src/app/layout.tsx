@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
 import About from "@/components/home/About/About";
 import Reviews from "@/components/home/Reviews/Reviews";
+import Hero from "@/components/home/Hero/Hero";
+import Sidebar from "@/components/layout/Sidebar/Sidebar";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -23,17 +25,18 @@ export default function RootLayout({
       className={`${onest.variable} ${unbounded.variable} ${publicSans.variable}`}
     >
       <body>
-        <header>
-          <Container>
-            <Header />
-          </Container>
-        </header>
-        <main>
-          {children}
-          <Reviews />
-          <About />
-        </main>
-        <footer></footer>
+        <div className="app-layout">
+          <Sidebar />
+          <div className="main-content">
+            <header>
+              <Container>
+                <Header />
+              </Container>
+            </header>
+            <main>{children}</main>
+            <footer></footer>
+          </div>
+        </div>
       </body>
     </html>
   );

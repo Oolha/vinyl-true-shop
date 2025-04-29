@@ -5,7 +5,6 @@ import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
 import About from "@/components/home/About/About";
 import Reviews from "@/components/home/Reviews/Reviews";
-import Hero from "@/components/home/Hero/Hero";
 
 export const metadata: Metadata = {
   title: "Vinyl True Shop",
@@ -31,9 +30,8 @@ export default function RootLayout({
         </header>
         <main>
           {children}
-          {/* <About />
-          <Reviews /> */}
-          <Hero />
+          <Reviews />
+          <About />
         </main>
         <footer></footer>
       </body>

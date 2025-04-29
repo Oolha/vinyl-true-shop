@@ -13,11 +13,6 @@ import VinylFilters, {
 import ellipseSidebar from "@/../public/icons/ellipseSidebar.svg";
 import arrowIcon from "@/../public/icons/arrowIcon.svg";
 
-interface NavLink {
-  title: string;
-  path: string;
-}
-
 const Sidebar = () => {
   const pathname = usePathname();
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -29,7 +24,7 @@ const Sidebar = () => {
 
     // Для якорів у маршрутах
     if (path.includes("#")) {
-      const [basePath, anchor] = path.split("#");
+      const [anchor] = path.split("#");
       if (typeof window !== "undefined") {
         return pathname === "/" && window.location.hash === `#${anchor}`;
       }

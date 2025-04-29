@@ -3,9 +3,6 @@ import "./globals.css";
 import { onest, unbounded, publicSans } from "./fonts";
 import Header from "@/components/layout/Header/Header";
 import Container from "@/components/ui/Container/Container";
-import About from "@/components/home/About/About";
-import Reviews from "@/components/home/Reviews/Reviews";
-import Hero from "@/components/home/Hero/Hero";
 import Sidebar from "@/components/layout/Sidebar/Sidebar";
 
 export const metadata: Metadata = {

@@ -206,7 +206,7 @@ const VinylFilters: React.FC<VinylFiltersProps> = ({
       </div>
       <CustomButton
         text="Фільтрувати"
-        onClick={() => console.log("Clicked!")}
+        onClick={handleApplyFilters}
         type="submit"
       />
     </div>
